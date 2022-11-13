@@ -182,7 +182,7 @@ body {
 }
 
 #header.scroll {
-  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 1); /* 1.2rem */ /* revisar depois */
+  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 1); /* 1.2rem */ 
 }
 
 /*====  LOGO ============================ */
@@ -475,7 +475,7 @@ nav.show div.icon-close {
 
 .card {
   padding: 5.8rem 3.2rem;  /* 5.8rem */                /* 3.2rem */
-  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.08); /* 1.2rem */
+  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.5); /* 1.2rem */
   border-bottom: 0.8rem solid var(--text-color-light); /* 0.4rem */
   border-radius: 0.8rem 0.8rem 0 0; /* 0.4rem */
   text-align: center;
@@ -782,6 +782,11 @@ footer .social a .whats:hover {
 
   #home .image {
     order: 1;
+  }
+
+  #home .image img {
+    width: 100%;
+    height: 100%;
   }
 
   #home .text {
