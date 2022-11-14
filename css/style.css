@@ -116,6 +116,7 @@ body {
   background: var(--base-color-alt);
   color: var(--white-color);
   font-weight: 500;
+  transition: background 0.3s linear;
 }
 
 .divider-1 {
@@ -480,6 +481,7 @@ nav.show div.icon-close {
   border-radius: 0.8rem 0.8rem 0 0; /* 0.4rem */
   text-align: center;
   background-color: var(--imagem-before-very-dark-blue-color); /* variável */
+  transition: all 0.3s linear;
 }
 
 .card img {
@@ -507,6 +509,7 @@ nav.show div.icon-close {
 
 .card:hover {
   box-shadow: 0rem 0rem 1.2rem rgba(255, 255, 255, 0.4);
+  transition: all 0.3s linear;
 }
 
 /*====  works ============================ */
@@ -536,7 +539,8 @@ nav.show div.icon-close {
 }
 
 #works blockquote:hover {
-  box-shadow: 0rem 0rem 1.2rem rgba(255, 255, 255, 0.3)
+  box-shadow: 0rem 0rem 1.2rem rgba(255, 255, 255, 0.3);
+  transition: all 0.5s linear;
 }
 
 #works blockquote p {
@@ -673,18 +677,22 @@ footer .social a {
 
 footer .social a:hover {
   transform: translateY(-0.8rem); /* -0.8rem */
+  transition: all 0.5s linear;
 }
 
 footer .social a .insta:hover {
   color: var(--instagram-color);
+  transition: all 0.3s linear;
 }
 
 footer .social a .face:hover {
   color: var(--facebook-color);
+  transition: all 0.3s linear;
 }
 
 footer .social a .whats:hover {
   color: var(--whatsapp-color);
+  transition: all 0.3s linear;
 }
 
 /* Back to top */
