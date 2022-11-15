@@ -621,6 +621,10 @@ nav.show div.icon-close {
   color: var(--white-color);
 }
 
+#contact .text p span {
+  color: var(--base-color);
+}
+
 #contact .button i,
 #contact ul li i {
   font-size: 2.4rem; /* 2.4rem */
@@ -658,6 +662,10 @@ footer .logo {
 footer .brand p {
   color: var(--text-color-light);
   margin-bottom: 1.2rem; /* 1.2rem */
+}
+
+footer .brand p span {
+  color: var(--base-color);
 }
 
 footer i {
