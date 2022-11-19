@@ -201,10 +201,12 @@ body {
   display: none;
 }
 
+
 /* Light Theme */
+
+/* Light Base */
 .light, .light #header {
   background-color: var(--text-color-light);
-  color: var(--dark-color);
 }
 
 .light #header #moon {
