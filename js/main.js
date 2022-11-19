@@ -116,11 +116,36 @@ function activateMenuAtCurrentSection() {
   }
 }
 
+// Modo Dark e Modo Light
+
 const changeThemeBtn = document.querySelector('#change-theme');
 
+// Botão Dark Mode
+function toggleDarkMode() {
+  document.body.classList.toggle('light')
+}
+
+// Carregar Light ou Dark Mode
+function loadTheme() {
+  const lightMode = localStorage.getItem('light')
+
+  if (lightMode) {
+    toggleDarkMode()
+  }
+}
+
 changeThemeBtn.addEventListener('change', function () {
-  document.body.classList.toggle('dark');
-});
+  toggleDarkMode()
+
+  // Salvar ou remover Dark Mode
+  localStorage.removeItem('light')
+
+  if (document.body.classList.contains('light')) {
+    localStorage.setItem('light', 1)
+  }
+})
+
+loadTheme()
 
 /* When Scroll */
 window.addEventListener('scroll', function () {

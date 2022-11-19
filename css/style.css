@@ -202,12 +202,12 @@ body {
 }
 
 /* Dark Theme */
-.dark, .dark #header {
+.light, .light #header {
   background-color: var(--text-color-light);
   color: var(--dark-color);
 }
 
-.dark .divider-1 {
+.light .divider-1 {
   height: 0.1rem;
   background: linear-gradient(
     270deg,
@@ -216,7 +216,7 @@ body {
   );
 }
 
-.dark .divider-2 {
+.light .divider-2 {
   height: 0.1rem;
   background: linear-gradient(
     270deg,
@@ -225,169 +225,169 @@ body {
   );
 }
 
-.dark .button {
+.light .button {
   background: var(--dark-color);
   color: var(--white-color);
 }
 
-.dark .button:hover {
+.light .button:hover {
   background: var(--base-color);
   color: var(--dark-color);
 }
 
-.dark #header #moon {
+.light #header #moon {
   display: none;
 }
 
-.dark #header #sun {
+.light #header #sun {
   display: block;
   color: var(--dark-color);
 }
 
-.dark .logo {
+.light .logo {
   color: var(--dark-color);
 }
 
-.dark nav ul li a {
+.light nav ul li a {
   color: var(--dark-color);
 }
 
-.dark nav ul li a:hover,
-.dark nav ul li a.active {
+.light nav ul li a:hover,
+.light nav ul li a.active {
   color: var(--base-color);
 }
 
-.dark nav.show .menu {
+.light nav.show .menu {
   background: var(--white-color);
 }
 
-.dark #home .titulo .title {
+.light #home .titulo .title {
   color: var(--white-color);
 }
 
-.dark #home h3 {
+.light #home h3 {
   color: var(--dark-color);
 }
 
-.dark #home .text ul {
+.light #home .text ul {
   color: var(--dark-color);
 }
 
-.dark #home .image::before {
+.light #home .image::before {
   background: var(--base-color-second);
 }
 
 
 
-.dark #about {
+.light #about {
   background: var(--white-color);
 }
 
-.dark #about .image::before {
+.light #about .image::before {
   background: var(--base-color-second);
 }
 
-.dark #about .text p {
+.light #about .text p {
   color: var(--dark-color);
 }
 
-.dark #about .text .title {
+.light #about .text .title {
   color: var(--dark-color);
 }
 
 
-.dark #services {
+.light #services {
   background: var(--text-color-light);
 }
 
-.dark .title {
+.light .title {
   color: var(--dark-color);
 }
 
-.dark .subtitle {
+.light .subtitle {
   color: var(--text-color-second);
 }
 
-.dark .card .title {
+.light .card .title {
   font-size: 2.4rem;
   margin-bottom: 1.2rem;
   color: var(--dark-color);
 }
 
-.dark .card {
+.light .card {
   background: none;
   box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.10);
   border-bottom: 0.4rem solid var(--base-color);
 }
 
-.dark .card p {
+.light .card p {
   color: var(--text-color-second);
 }
 
-.dark .card:hover {
+.light .card:hover {
   box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.4);
   transition: all 0.3s linear;
 }
 
 
-.dark #works {
+.light #works {
   background-color: var(--white-color);
   box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.10);
 }
 
-.dark #works blockquote:hover {
+.light #works blockquote:hover {
   box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.6);
   transition: all 0.3s linear;
 }
 
-.dark #works blockquote {
+.light #works blockquote {
   background: var(--white-color);
 }
 
-.dark #works blockquote p {
+.light #works blockquote p {
   color: var(--text-color-second);
 }
 
-.dark .swiper-pagination-bullet {
+.light .swiper-pagination-bullet {
   background: var(--dark-color);
 }
 
-.dark .swiper-pagination-bullet-active {
+.light .swiper-pagination-bullet-active {
   background: var(--base-color);
 }
 
 
 
-.dark #contact {
+.light #contact {
   background: var(--text-color-light);
 }
 
-.dark #contact .text p {
+.light #contact .text p {
   color: var(--text-color-second);
 }
 
-.dark #contact ul.grid {
+.light #contact ul.grid {
   color: var(--text-color-second);
 }
 
 
-.dark footer {
+.light footer {
   background: var(--base-color-second);
 }
 
-.dark footer span {
+.light footer span {
   color: var(--text-color);
 }
 
-.dark footer .brand p {
+.light footer .brand p {
   color: var(--dark-color);
 }
 
-.dark footer .brand p span {
+.light footer .brand p span {
   color: var(--dark-color);
 }
 
-.dark footer i {
+.light footer i {
   color: var(--dark-color);
 }
 
