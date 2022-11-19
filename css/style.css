@@ -201,9 +201,22 @@ body {
   display: none;
 }
 
-/* Dark Theme */
+/* Light Theme */
 .light, .light #header {
   background-color: var(--text-color-light);
+  color: var(--dark-color);
+}
+
+.light #header #moon {
+  display: none;
+}
+
+.light #header #sun {
+  display: block;
+  color: var(--dark-color);
+}
+
+.light .title {
   color: var(--dark-color);
 }
 
@@ -235,15 +248,6 @@ body {
   color: var(--dark-color);
 }
 
-.light #header #moon {
-  display: none;
-}
-
-.light #header #sun {
-  display: block;
-  color: var(--dark-color);
-}
-
 .light .logo {
   color: var(--dark-color);
 }
@@ -261,6 +265,8 @@ body {
   background: var(--white-color);
 }
 
+/* Home */
+
 .light #home .titulo .title {
   color: var(--white-color);
 }
@@ -277,7 +283,7 @@ body {
   background: var(--base-color-second);
 }
 
-
+/* About */
 
 .light #about {
   background: var(--white-color);
@@ -295,40 +301,38 @@ body {
   color: var(--dark-color);
 }
 
+/* Services */
 
 .light #services {
   background: var(--text-color-light);
 }
 
-.light .title {
-  color: var(--dark-color);
-}
-
-.light .subtitle {
+.light #services .subtitle {
   color: var(--text-color-second);
 }
 
-.light .card .title {
+.light #services .card .title {
   font-size: 2.4rem;
   margin-bottom: 1.2rem;
   color: var(--dark-color);
 }
 
-.light .card {
+.light #services .card {
   background: none;
   box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.10);
   border-bottom: 0.4rem solid var(--base-color);
 }
 
-.light .card p {
+.light #services .card p {
   color: var(--text-color-second);
 }
 
-.light .card:hover {
+.light #services .card:hover {
   box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.4);
   transition: all 0.3s linear;
 }
 
+/* Works */
 
 .light #works {
   background-color: var(--white-color);
@@ -348,15 +352,15 @@ body {
   color: var(--text-color-second);
 }
 
-.light .swiper-pagination-bullet {
+.light #works .swiper-pagination-bullet {
   background: var(--dark-color);
 }
 
-.light .swiper-pagination-bullet-active {
+.light #works .swiper-pagination-bullet-active {
   background: var(--base-color);
 }
 
-
+/* Contact */
 
 .light #contact {
   background: var(--text-color-light);
@@ -370,6 +374,7 @@ body {
   color: var(--text-color-second);
 }
 
+/* Footer */
 
 .light footer {
   background: var(--base-color-second);
