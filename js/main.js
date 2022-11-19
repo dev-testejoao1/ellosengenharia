@@ -116,6 +116,12 @@ function activateMenuAtCurrentSection() {
   }
 }
 
+const changeThemeBtn = document.querySelector('#change-theme');
+
+changeThemeBtn.addEventListener('change', function () {
+  document.body.classList.toggle('dark');
+});
+
 /* When Scroll */
 window.addEventListener('scroll', function () {
   changeHeaderWhenScroll()

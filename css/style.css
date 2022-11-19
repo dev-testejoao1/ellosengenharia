@@ -1,5 +1,5 @@
 /*====  RESET ============================ */
-* {
+*, ::before, ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,23 +15,24 @@ a {
 
 /*====  VARIABLES ============================ */
 :root {
-  --header-height: 7.2rem; /* 7.2rem */
+  --header-height: 7.2rem;
 
   /* colors */
   --hue: 36;
   /* HSL color mode */
   --base-color: hsl(var(--hue) 100% 57%);
-  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-second: hsl(var(--hue) 94% 79%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
+  --text-color-second: hsl(0 0% 33%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(220 64% 13%);
   --very-dark-blue-color: hsl(220 62% 8%);
 
   /* fonts */
-  --title-font-size: 3.0rem; /* 3.0rem */
-  --subtitle-font-size: 1.6rem; /* 1.6rem */
+  --title-font-size: 3.0rem;
+  --subtitle-font-size: 1.6rem;
 
   --title-font: "Poppins", sans-serif;
   --body-font: "DM Sans", sans-serif;
@@ -84,7 +85,7 @@ html {
 }
 
 body {
-  font: 400 1.6rem var(--body-font); /* 1.6rem */
+  font: 400 1.6rem var(--body-font);
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
@@ -103,12 +104,12 @@ body {
 .button {
   background-color: var(--text-color-light);
   color: var(--dark-color);
-  height: 5.6rem; /* 5.6rem */
+  height: 5.6rem;
   display: inline-flex;
   align-items: center;
-  padding: 0 3.2rem; /* 3.2rem */
-  border-radius: 0.8rem; /* 0.4rem */
-  font: 500 1.6rem var(--body-font); /* 1.6rem */
+  padding: 0 3.2rem;
+  border-radius: 0.8rem;
+  font: 500 1.6rem var(--body-font);
   transition: background 0.3s;
 }
 
@@ -120,7 +121,7 @@ body {
 }
 
 .divider-1 {
-  height: 0.1rem; /* 0.1rem */
+  height: 0.1rem;
   background: linear-gradient(
     270deg,
     hsla(var(--hue), 36%, 57%, 1),
@@ -129,7 +130,7 @@ body {
 }
 
 .divider-2 {
-  height: 0.1rem; /* 0.1rem */
+  height: 0.1rem;
   background: linear-gradient(
     270deg,
     hsla(var(--hue), 65%, 88%, 0.34),
@@ -139,21 +140,21 @@ body {
 
 /*====  LAYOUT ============================ */
 .container {
-  margin-left: 2.4rem; /* 2.4rem */
-  margin-right: 2.4rem; /* 2.4rem */
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
 }
 
 .grid {
   display: grid;
-  gap: 3.2rem; /* 3.2rem */
+  gap: 3.2rem;
 }
 
 .section {
-  padding: calc(8.0rem + var(--header-height)) 0; /* 8.0rem */
+  padding: calc(8.0rem + var(--header-height)) 0;
 }
 
 .section .title {
-  margin-bottom: 1.6rem; /* 1.6rem */
+  margin-bottom: 1.6rem;
 }
 
 .section .subtitle {
@@ -162,7 +163,7 @@ body {
 }
 
 .section header {
-  margin-bottom: 6.4rem; /* 6.4rem */
+  margin-bottom: 6.4rem;
 }
 
 .section header strong {
@@ -170,8 +171,8 @@ body {
 }
 
 #header {
-  border-bottom: 0.1rem solid #e4e4e4; /* 0.1rem */
-  margin-bottom: 3.2rem; /* 3.2rem */
+  border-bottom: 0.1rem solid #e4e4e4;
+  margin-bottom: 3.2rem;
   display: flex;
 
   position: fixed;
@@ -183,12 +184,216 @@ body {
 }
 
 #header.scroll {
-  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 1); /* 1.2rem */ 
+  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 1);
+}
+
+#header #sun, #header #moon {
+  font-size: 2.4rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+#header #sun {
+  display: none;
+}
+
+#header input[type="checkbox"] {
+  display: none;
+}
+
+/* Dark Theme */
+.dark, .dark #header {
+  background-color: var(--text-color-light);
+  color: var(--dark-color);
+}
+
+.dark .divider-1 {
+  height: 0.1rem;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 27%, 1),
+    hsla(var(--hue), 65%, 88%, 0.34)
+  );
+}
+
+.dark .divider-2 {
+  height: 0.1rem;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 65%, 88%, 0.34),
+    hsla(var(--hue), 36%, 27%, 1)
+  );
+}
+
+.dark .button {
+  background: var(--dark-color);
+  color: var(--white-color);
+}
+
+.dark .button:hover {
+  background: var(--base-color);
+  color: var(--dark-color);
+}
+
+.dark #header #moon {
+  display: none;
+}
+
+.dark #header #sun {
+  display: block;
+  color: var(--dark-color);
+}
+
+.dark .logo {
+  color: var(--dark-color);
+}
+
+.dark nav ul li a {
+  color: var(--dark-color);
+}
+
+.dark nav ul li a:hover,
+.dark nav ul li a.active {
+  color: var(--base-color);
+}
+
+.dark nav.show .menu {
+  background: var(--white-color);
+}
+
+.dark #home .titulo .title {
+  color: var(--white-color);
+}
+
+.dark #home h3 {
+  color: var(--dark-color);
+}
+
+.dark #home .text ul {
+  color: var(--dark-color);
+}
+
+.dark #home .image::before {
+  background: var(--base-color-second);
+}
+
+
+
+.dark #about {
+  background: var(--white-color);
+}
+
+.dark #about .image::before {
+  background: var(--base-color-second);
+}
+
+.dark #about .text p {
+  color: var(--dark-color);
+}
+
+.dark #about .text .title {
+  color: var(--dark-color);
+}
+
+
+.dark #services {
+  background: var(--text-color-light);
+}
+
+.dark .title {
+  color: var(--dark-color);
+}
+
+.dark .subtitle {
+  color: var(--text-color-second);
+}
+
+.dark .card .title {
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+  color: var(--dark-color);
+}
+
+.dark .card {
+  background: none;
+  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.10);
+  border-bottom: 0.4rem solid var(--base-color);
+}
+
+.dark .card p {
+  color: var(--text-color-second);
+}
+
+.dark .card:hover {
+  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.4);
+  transition: all 0.3s linear;
+}
+
+
+.dark #works {
+  background-color: var(--white-color);
+  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.10);
+}
+
+.dark #works blockquote:hover {
+  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.6);
+  transition: all 0.3s linear;
+}
+
+.dark #works blockquote {
+  background: var(--white-color);
+}
+
+.dark #works blockquote p {
+  color: var(--text-color-second);
+}
+
+.dark .swiper-pagination-bullet {
+  background: var(--dark-color);
+}
+
+.dark .swiper-pagination-bullet-active {
+  background: var(--base-color);
+}
+
+
+
+.dark #contact {
+  background: var(--text-color-light);
+}
+
+.dark #contact .text p {
+  color: var(--text-color-second);
+}
+
+.dark #contact ul.grid {
+  color: var(--text-color-second);
+}
+
+
+.dark footer {
+  background: var(--base-color-second);
+}
+
+.dark footer span {
+  color: var(--text-color);
+}
+
+.dark footer .brand p {
+  color: var(--dark-color);
+}
+
+.dark footer .brand p span {
+  color: var(--dark-color);
+}
+
+.dark footer i {
+  color: var(--dark-color);
 }
 
 /*====  LOGO ============================ */
 .logo {
-  font: 700 2.1rem var(--title-font); /* 2.1rem */ /* revisar depois */
+  font: 700 2.1rem var(--title-font);
   color: var(--text-color-light);
 }
 
@@ -221,18 +426,18 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-  color: var(--text-color-light);
+  color: var(--base-color);
 }
 
 nav ul li a::after {
   content: "";
   width: 0%;
-  height: 0.2rem; /* 0.2rem */
+  height: 0.2rem;
   background: var(--base-color);
 
   position: absolute;
   left: 0;
-  bottom: -2.4rem; /* -2.4rem */
+  bottom: -2.4rem;
 
   transition: width 0.2s;
 }
@@ -245,7 +450,7 @@ nav ul li a.active::after {
 nav .menu {
   opacity: 0;
   visibility: hidden;
-  top: -32.0rem; /* -32.0rem */
+  top: -32.0rem;
   transition: 0.2s;
 }
 
@@ -276,13 +481,22 @@ nav.show .menu ul {
 }
 
 nav.show ul.grid {
-  gap: 6.4rem; /* 6.4rem */
+  gap: 6.4rem;
+}
+
+nav.show #theme {
+  display: grid;
+  place-content: center;
+}
+
+nav.show #theme #sun, nav.show #theme #moon{
+  font-size: 3.0rem;
 }
 
 /* toggle menu */
 .toggle {
   color: var(--base-color);
-  font-size: 2.4rem; /* 2.4rem */
+  font-size: 2.4rem;
   cursor: pointer;
 }
 
@@ -291,8 +505,8 @@ nav .icon-close {
   opacity: 0;
 
   position: absolute;
-  top: -2.4rem; /* -2.4rem */
-  right: 2.4rem; /* 2.4rem */
+  top: -2.4rem;
+  right: 2.4rem;
 
   transition: 0.2s;
 }
@@ -300,7 +514,7 @@ nav .icon-close {
 nav.show div.icon-close {
   visibility: visible;
   opacity: 1;
-  top: 2.4rem; /* -2.4rem */
+  top: 2.4rem;
 }
 
 /*====  HOME ============================ */
@@ -320,7 +534,7 @@ nav.show div.icon-close {
   content: "";
   height: 100%;
   width: 100%;
-  background: var(--imagem-before-very-dark-blue-color); /* variável */
+  background: var(--imagem-before-very-dark-blue-color);
   position: absolute;
   top: -16.8%;
   left: 16.7%;
@@ -333,12 +547,12 @@ nav.show div.icon-close {
 
 #home .image img,
 #home .image::before {
-  border-radius: 0.8rem; /* 0.4rem */
+  border-radius: 0.8rem;
 }
 
 #home .text {
-  margin-left: 2.4rem; /* 2.4rem */
-  margin-right: 2.4rem; /* 2.4rem */
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
   text-align: center;
 }
 
@@ -380,7 +594,7 @@ nav.show div.icon-close {
 }
 
 #home .text h2 {
-  margin-bottom: 1.6rem; /* 1.6rem */
+  margin-bottom: 1.6rem;
   text-align: center;
 }
 
@@ -391,15 +605,15 @@ nav.show div.icon-close {
 }
 
 #home .text ul {
-  margin-bottom: 3.2rem; /* 3.2rem */
+  margin-bottom: 3.2rem;
   color: var(--white-color);
   list-style: square;
 }
 
 #home .button i,
 #home ul li i {
-  font-size: 2.4rem; /* 2.4rem */
-  margin-right: 1.0rem; /* 1.0rem */
+  font-size: 2.4rem;
+  margin-right: 1.0rem;
 }
 
 #home .text .loader {
@@ -457,12 +671,12 @@ nav.show div.icon-close {
 
 #about .image img,
 #about .image::before {
-  border-radius: 0.8rem; /* 0.4rem */
+  border-radius: 0.8rem;
 }
 
 #about .text {
-  margin-left: 2.4rem; /* 2.4rem */
-  margin-right: 2.4rem; /* 2.4rem */
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
 }
 
 #about .text p {
@@ -471,16 +685,16 @@ nav.show div.icon-close {
 
 /*====  SERVICES ============================ */
 .cards.grid {
-  gap: 2.4rem; /* 2.4rem */
+  gap: 2.4rem;
 }
 
 .card {
-  padding: 5.8rem 3.2rem;  /* 5.8rem */                /* 3.2rem */
-  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.5); /* 1.2rem */
-  border-bottom: 0.8rem solid var(--text-color-light); /* 0.4rem */
-  border-radius: 0.8rem 0.8rem 0 0; /* 0.4rem */
+  padding: 5.8rem 3.2rem;
+  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.5);
+  border-bottom: 0.4rem solid var(--text-color-light);
+  border-radius: 0.4rem 0.4rem 0 0;
   text-align: center;
-  background-color: var(--imagem-before-very-dark-blue-color); /* variável */
+  background-color: var(--imagem-before-very-dark-blue-color);
   transition: all 0.3s linear;
 }
 
@@ -499,8 +713,8 @@ nav.show div.icon-close {
 } */
 
 .card .title {
-  font-size: 2.4rem; /* 2.4rem */
-  margin-bottom: 1.2rem; /* 1.2rem */
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
 }
 
 .card p {
@@ -523,15 +737,15 @@ nav.show div.icon-close {
 }
 
 #works header {
-  margin-left: 2.4rem; /* 2.4rem */
-  margin-right: 2.4rem; /* 2.4rem */
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
   margin-bottom: 0;
 }
 
 #works blockquote {
-  padding: 3.2rem; /* 3.2rem */
-  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.4); /* 1.2rem */ /* revisar depois */
-  border-radius: 0.8rem; /* 0.4rem */
+  padding: 3.2rem;
+  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.4);
+  border-radius: 0.8rem;
   background-color: var(--imagem-before-very-dark-blue-color);
   display: flex;
   flex-direction: column;
@@ -547,21 +761,20 @@ nav.show div.icon-close {
   position: relative;
   margin-top: 8.0rem;
   margin-left: 1.0rem;
-  text-indent: 3.0rem; /* 3.0rem */
-  margin-bottom: 2.4rem; /* 2.4rem */
+  text-indent: 3.0rem;
+  margin-bottom: 2.4rem;
   color: var(--white-color);
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 3.0rem;
-  /* color: var(--title-color); */
 }
 
 #works blockquote p span {
-  font: 700 4.0rem serif; /* 4.0rem */
+  font: 700 4.0rem serif;
   position: absolute;
-  top: -0.1rem; /* -0.6rem */
-  left: -3.0rem; /* -3.0rem */
+  top: -0.1rem;
+  left: -3.0rem;
   color: var(--base-color);
 }
 
@@ -574,11 +787,10 @@ nav.show div.icon-close {
 }
 
 #works cite img {
-  width: 100%; /* 3.2rem */
-  height: 50.0rem; /* 3.2rem */
+  width: 100%;
+  height: 50.0rem;
   margin: 0 auto;
   border-radius: 0.8rem;
-  background: var(--white-color);
 }
 
 #works .work {
@@ -595,7 +807,7 @@ nav.show div.icon-close {
 /* swiper */
 .swiper-slide {
   height: auto;
-  padding: 6.4rem 1.6rem; /* 6.4rem */ /* 1.6rem */
+  padding: 6.4rem 1.6rem;
 }
 
 .next, .prev {
@@ -603,8 +815,8 @@ nav.show div.icon-close {
 }
 
 .swiper-pagination-bullet {
-  width: 1.2rem; /* 1.2rem */
-  height: 1.2rem; /* 1.2rem */
+  width: 1.2rem;
+  height: 1.2rem;
   background: var(--text-color-light);
 }
 
@@ -613,11 +825,11 @@ nav.show div.icon-close {
 }
 /*====  CONTACT ============================ */
 #contact .grid {
-  gap: 6.4rem; /* 6.4rem */
+  gap: 6.4rem;
 }
 
 #contact .text p {
-  margin-bottom: 3.2rem; /* 3.2rem */
+  margin-bottom: 3.2rem;
   color: var(--white-color);
 }
 
@@ -627,12 +839,12 @@ nav.show div.icon-close {
 
 #contact .button i,
 #contact ul li i {
-  font-size: 2.4rem; /* 2.4rem */
-  margin-right: 1.0rem; /* 1.0rem */
+  font-size: 2.4rem;
+  margin-right: 1.0rem;
 }
 
 #contact ul.grid {
-  gap: 3.2rem; /* 3.2rem */
+  gap: 3.2rem;
   color: var(--white-color);
 }
 
@@ -651,17 +863,17 @@ footer {
 }
 
 footer.section {
-  padding: 6.4rem 0; /* 6.4rem */
+  padding: 6.4rem 0;
 }
 
 footer .logo {
   display: inline-block;
-  margin-bottom: 2.4rem; /* 2.4rem */
+  margin-bottom: 2.4rem;
 }
 
 footer .brand p {
   color: var(--text-color-light);
-  margin-bottom: 1.2rem; /* 1.2rem */
+  margin-bottom: 1.2rem;
 }
 
 footer .brand p span {
@@ -669,7 +881,7 @@ footer .brand p span {
 }
 
 footer i {
-  font-size: 2.4rem; /* 2.4rem */
+  font-size: 2.4rem;
   color: var(--text-color-light);
 }
 
@@ -684,7 +896,7 @@ footer .social a {
 }
 
 footer .social a:hover {
-  transform: translateY(-0.8rem); /* -0.8rem */
+  transform: translateY(-0.8rem);
   transition: all 0.5s linear;
 }
 
@@ -709,13 +921,13 @@ footer .social a .whats:hover {
   color: var(--text-color-light);
 
   position: fixed;
-  right: 1.6rem; /* 1.6rem */
-  bottom: 1.6rem; /* 1.6rem */
+  right: 1.6rem;
+  bottom: 1.6rem;
 
-  padding: 0.8rem; /* 0.8rem */
+  padding: 0.8rem;
   clip-path: circle();
 
-  font-size: 2.4rem; /* 2.4rem */
+  font-size: 2.4rem;
   line-height: 0;
 
   visibility: hidden;
@@ -737,25 +949,25 @@ footer .social a .whats:hover {
 @media (min-width: 1200px) {
   /* reusable classes */
   .container {
-    max-width: 112.0rem; /* 112.0rem */
+    max-width: 112.0rem;
     margin-left: auto;
     margin-right: auto;
   }
 
   .section {
-    padding: 16.0rem 0; /* 16.0rem */
+    padding: 16.0rem 0;
   }
 
   .section header,
   #works header {
-    max-width: 51.2rem; /* 51.2rem */
+    max-width: 51.2rem;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
 
   .button {
-    height: 5.0rem; /* 5.0rem */
+    height: 5.0rem;
   }
 
   /* navigation */
@@ -767,11 +979,11 @@ footer .social a .whats:hover {
 
   nav .menu ul {
     display: flex;
-    gap: 3.2rem; /* 3.2rem */
+    gap: 3.2rem;
   }
 
   nav .menu ul li a.title {
-    font: 400 1.6rem var(--body-font); /* 1.6rem */
+    font: 400 1.6rem var(--body-font);
     -webkit-font-smoothing: antialiased;
   }
 
@@ -807,7 +1019,7 @@ footer .social a .whats:hover {
 
   #home .text {
     order: 0;
-    max-width: 38.4rem; /* 38.4rem */
+    max-width: 38.4rem;
     text-align: left;
   }
 
@@ -834,8 +1046,8 @@ footer .social a .whats:hover {
   }
 
   .card {
-    padding-left: 4.8rem; /* 4.8rem */
-    padding-right: 4.8rem; /* 4.8rem */
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
   }
 
   /* works */
@@ -855,8 +1067,8 @@ footer .social a .whats:hover {
   }
 
   #works .work blockquote cite img {
-    width: 40.0rem; /* 3.2rem */
-    height: 40.0rem; /* 3.2rem */
+    width: 40.0rem;
+    height: 40.0rem;
     cursor: pointer;
     position: relative;
   }
@@ -865,8 +1077,8 @@ footer .social a .whats:hover {
     top: 5.0rem;
   }
   #works blockquote p span {
-    top: -0.2rem; /* -0.6rem */
-    left: -3.0rem; /* -3.0rem */
+    top: -0.2rem;
+    left: -3.0rem;
   }
 
   #works blockquote p {
@@ -891,12 +1103,12 @@ footer .social a .whats:hover {
   }
 
   #contact .text {
-    max-width: 40.0rem; /* 40.0rem */
+    max-width: 40.0rem;
   }
 
   /* footer */
   footer.section {
-    padding: 6.0rem 0; /* 6.0rem */
+    padding: 6.0rem 0;
   }
 
   footer .container {
@@ -906,15 +1118,15 @@ footer .social a .whats:hover {
   }
 
   footer .logo {
-    font-size: 3.6rem; /* 3.6rem */
+    font-size: 3.6rem;
   }
 }
 /* large devices: 1023 > */
 /* large devices: 992 > */
 @media (min-width: 992px) {
   :root {
-    --title-font-size: 3.6rem; /* 3.6rem */
-    --subtitle-font-size: 1.8rem; /* 1.8rem */
+    --title-font-size: 3.6rem;
+    --subtitle-font-size: 1.8rem;
   }
 
   @keyframes typing {
