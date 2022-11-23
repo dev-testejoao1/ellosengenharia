@@ -184,7 +184,8 @@ body {
 }
 
 #header.scroll {
-  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 1);
+  box-shadow: 0rem 0rem 1.2rem rgba(255, 255, 255, 0.5);
+  transition: all 0.5s linear;
 }
 
 #header #sun, #header #moon {
@@ -201,12 +202,21 @@ body {
   display: none;
 }
 
+#header .label {
+  position: relative;
+  right: 1.5rem;
+}
 
 /* Light Theme */
 
 /* Light Base */
 .light, .light #header {
   background-color: var(--text-color-light);
+}
+
+.light #header.scroll {
+  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.5);
+  transition: all 0.5s linear;
 }
 
 .light #header #moon {
@@ -226,7 +236,7 @@ body {
   height: 0.1rem;
   background: linear-gradient(
     270deg,
-    hsla(var(--hue), 36%, 27%, 1),
+    hsla(var(--hue), 100%, 60%, 1),
     hsla(var(--hue), 65%, 88%, 0.34)
   );
 }
@@ -236,7 +246,7 @@ body {
   background: linear-gradient(
     270deg,
     hsla(var(--hue), 65%, 88%, 0.34),
-    hsla(var(--hue), 36%, 27%, 1)
+    hsla(var(--hue), 100%, 60%, 1)
   );
 }
 
@@ -402,6 +412,7 @@ body {
 .logo {
   font: 700 2.1rem var(--title-font);
   color: var(--text-color-light);
+  margin-right: auto;
 }
 
 .logo span {
@@ -418,7 +429,7 @@ nav {
   height: var(--header-height);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
 }
 
@@ -1150,5 +1161,15 @@ footer .social a .whats:hover {
   #works cite img {
     width: 50%;
     height: 10%;
+  }
+  .logo {
+    margin: 0;
+  }
+  #header .label {
+    right: 0;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
   }
 }
