@@ -228,6 +228,10 @@ body {
   color: var(--dark-color);
 }
 
+.light nav.show .menu i {
+  color: var(--dark-color);
+}
+
 .light .title {
   color: var(--dark-color);
 }
@@ -509,6 +513,47 @@ nav.show #theme {
 
 nav.show #theme #sun, nav.show #theme #moon{
   font-size: 3.0rem;
+}
+
+nav.show .label {
+  opacity: 0;
+  visibility: hidden;
+}
+
+nav.show .menu i {
+  font-size: 3.2rem;
+  color: var(--text-color-light);
+}
+
+nav.show .menu .social {
+  grid-auto-flow: column;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+nav.show .social a {
+  transition: 0.3s;
+  display: inline-block;
+}
+
+nav.show .social a:hover {
+  transform: translateY(-0.8rem);
+  transition: all 0.5s linear;
+}
+
+nav.show .social a .insta:hover {
+  color: var(--instagram-color);
+  transition: all 0.3s linear;
+}
+
+nav.show .social a .face:hover {
+  color: var(--facebook-color);
+  transition: all 0.3s linear;
+}
+
+nav.show .social a .whats:hover {
+  color: var(--whatsapp-color);
+  transition: all 0.3s linear;
 }
 
 /* toggle menu */
