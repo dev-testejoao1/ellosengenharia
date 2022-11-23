@@ -520,6 +520,11 @@ nav.show .label {
   visibility: hidden;
 }
 
+nav.show .menu .social {
+  opacity: 1;
+  visibility: visible;
+}
+
 nav.show .menu i {
   font-size: 3.2rem;
   color: var(--text-color-light);
@@ -528,7 +533,7 @@ nav.show .menu i {
 nav.show .menu .social {
   grid-auto-flow: column;
   width: fit-content;
-  margin: 0 auto;
+  margin: 0 auto; /* Verificar depois */
 }
 
 nav.show .social a {
@@ -1056,6 +1061,12 @@ footer .social a .whats:hover {
   }
 
   nav .icon-menu {
+    display: none;
+  }
+
+  nav .menu .social {
+    opacity: 0;
+    visibility: hidden;
     display: none;
   }
 
