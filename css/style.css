@@ -1019,7 +1019,7 @@ footer .social a .whats:hover {
   z-index: 1;
 }
 
-/* botão whatsapp */
+/* botão whatsapp na pagina */
 .whatsapp {
   background: var(--whatsapp-color);
   color: var(--text-color-light);

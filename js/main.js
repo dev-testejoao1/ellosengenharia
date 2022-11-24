@@ -91,6 +91,7 @@ function backToTop() {
   }
 }
 
+/* Botão whatsapp na pagina */
 const whatsappButton = document.querySelector('.whatsapp')
 
 function whatsapp() {
