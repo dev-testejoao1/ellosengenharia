@@ -91,6 +91,16 @@ function backToTop() {
   }
 }
 
+const whatsappButton = document.querySelector('.whatsapp')
+
+function whatsapp() {
+  if (window.scrollY >= 560) {
+    whatsappButton.classList.add('show')
+  } else {
+    whatsappButton.classList.remove('show')
+  }
+}
+
 /* Menu ativo conforme a seção visível na página */
 const sections = document.querySelectorAll('main section[id]')
 function activateMenuAtCurrentSection() {
@@ -151,5 +161,6 @@ loadTheme()
 window.addEventListener('scroll', function () {
   changeHeaderWhenScroll()
   backToTop()
+  whatsapp()
   activateMenuAtCurrentSection()
 })
