@@ -202,7 +202,7 @@ body {
   display: none;
 }
 
-#header .label {
+#header #theme {
   position: relative;
   right: 1.5rem;
 }
@@ -282,6 +282,10 @@ body {
 }
 
 /* Light Home */
+
+.light #home {
+  background: var(--text-color-light);
+}
 
 .light #home .titulo .title {
   color: var(--white-color);
@@ -515,7 +519,7 @@ nav.show #theme #sun, nav.show #theme #moon{
   font-size: 3.0rem;
 }
 
-nav.show .label {
+nav.show #theme {
   opacity: 0;
   visibility: hidden;
 }
@@ -526,7 +530,7 @@ nav.show .menu .social {
 }
 
 nav.show .menu i {
-  font-size: 3.2rem;
+  font-size: 4.2rem;
   color: var(--text-color-light);
 }
 
@@ -676,6 +680,9 @@ nav.show div.icon-close {
   margin-bottom: 3.2rem;
   color: var(--white-color);
   list-style: square;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 #home .button i,
@@ -1218,10 +1225,13 @@ footer .social a .whats:hover {
     width: 50%;
     height: 10%;
   }
+}
+
+@media (min-width: 375px) {
   .logo {
     margin: 0;
   }
-  #header .label {
+  #header #theme {
     right: 0;
   }
   nav {
