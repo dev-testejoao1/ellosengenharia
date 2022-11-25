@@ -1183,6 +1183,8 @@ footer .social a .whats:hover {
     outline: none;
   }
 
+  /* revisar depois */
+
   dialog::backdrop {
     background-color: rgb(0 0 0 / .3);
   }
