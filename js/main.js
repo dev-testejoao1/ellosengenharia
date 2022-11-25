@@ -127,9 +127,23 @@ function activateMenuAtCurrentSection() {
   }
 }
 
+// Modal imagens
+
+const verFotosBtn = document.querySelector('#fotos-btn')
+const modal = document.querySelector('dialog')
+const modalClose = document.querySelector('dialog #fechar')
+
+verFotosBtn.onclick = function () {
+  modal.showModal()
+}
+
+modalClose.onclick = function () {
+  modal.close()
+}
+
 // Modo Dark e Modo Light
 
-const changeThemeBtn = document.querySelector('#change-theme');
+const changeThemeBtn = document.querySelector('#change-theme')
 
 // Botão Dark Mode
 function toggleDarkMode() {
