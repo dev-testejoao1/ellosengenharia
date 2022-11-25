@@ -1020,18 +1020,19 @@ footer .social a .whats:hover {
 }
 
 /* botão whatsapp na pagina */
+
 .whatsapp {
   background: var(--whatsapp-color);
   color: var(--text-color-light);
 
   position: fixed;
   left: 1.6rem;
-  bottom: 1.6rem;
+  bottom: 1.4rem;
 
-  padding: 0.8rem;
+  padding: 1.0rem;
   clip-path: circle();
 
-  font-size: 3.0rem;
+  font-size: 2.5rem;
   line-height: 0;
 
   visibility: hidden;
