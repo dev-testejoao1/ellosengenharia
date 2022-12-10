@@ -352,25 +352,6 @@ body {
   transition: all 0.3s linear;
 }
 
-.light #services .card #fotos-btn, .light #services .card #fotos-btn2, .light #services .card #fotos-btn3,
-.light #services .card #fotos-btn4, .light #services .card #fotos-btn5 {
-  background: var(--imagem-before-very-dark-blue-color);
-  color: var(--text-color-light);
-  font-weight: 400;
-}
-
-.light #services .card #fotos-btn:hover, .light #services .card #fotos-btn2:hover, .light #services .card #fotos-btn3:hover,
-.light #services .card #fotos-btn4:hover, .light #services .card #fotos-btn5:hover {
-  background: var(--base-color);
-  color: var(--dark-color);
-}
-
-.light dialog {
-  border: 0.1rem solid rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 1.2rem rgb(0 0 0 / 0.5);
-  background: var(--white-color);
-}
-
 /* Light Works */
 
 .light #works {
@@ -820,108 +801,6 @@ nav.show div.icon-close {
   transition: all 0.3s linear;
 }
 
-.card #fotos-btn, .card #fotos-btn2, .card #fotos-btn3,
-.card #fotos-btn4, .card #fotos-btn5 {
-  position: absolute;
-  bottom: 1.0rem;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
-  width: 30%;
-  height: 2.6rem;
-  cursor: pointer;
-  font-size: 1.6rem;
-  border: none;
-  outline: none;
-  font-weight: 400;
-  background: var(--text-color-light);
-  border-radius: .4rem;
-}
-
-dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.5);
-}
-
-dialog {
-  border: 0.1rem solid rgba(255, 255, 255, 0.5);
-  background-color: var(--imagem-before-very-dark-blue-color);
-  border-radius: 0.5rem;
-  box-shadow: 0 0 1.2rem rgb(255 255 255 / .3);
-  margin: auto;
-  overflow: hidden;
-}
-
-.modal-content {
-  height: 89.5vmin;
-  width: 100%;
-  position: relative;
-  display: grid;
-  overflow: hidden;
-  padding: 0;
-}
-
-.modal-content img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.modal-content #my-img, .modal-content #my-img2, .modal-content #my-img3, .modal-content #my-img4,
-.modal-content #my-img5, .modal-content #my-img6, .modal-content #my-img7, .modal-content #my-img8,
-.modal-content #my-img9, .modal-content #my-img10, .modal-content #my-img11, .modal-content #my-img12,
-.modal-content #my-img13, .modal-content #my-img14, .modal-content #my-img15, .modal-content #my-img16,
-.modal-content #my-img17, .modal-content #my-img18, .modal-content #my-img19, .modal-content #my-img20 {
-  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-}
-
-.modal-content #slider, .modal-content #slider2, .modal-content #slider3, .modal-content #slider4,
-.modal-content #slider5, .modal-content #slider6, .modal-content #slider7, .modal-content #slider8,
-.modal-content #slider9, .modal-content #slider10, .modal-content #slider11, .modal-content #slider12,
-.modal-content #slider13, .modal-content #slider14, .modal-content #slider15, .modal-content #slider16,
-.modal-content #slider17, .modal-content #slider18, .modal-content #slider19, .modal-content #slider20 {
-  position: relative;
-  -webkit-appearance: none;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  outline: none;
-  margin-left: -0.1rem;
-}
-
-.modal-content #slider::-webkit-slider-thumb, .modal-content #slider2::-webkit-slider-thumb, .modal-content #slider3::-webkit-slider-thumb,
-.modal-content #slider4::-webkit-slider-thumb, .modal-content #slider5::-webkit-slider-thumb, .modal-content #slider6::-webkit-slider-thumb, 
-.modal-content #slider7::-webkit-slider-thumb, .modal-content #slider8::-webkit-slider-thumb, .modal-content #slider9::-webkit-slider-thumb, 
-.modal-content #slider10::-webkit-slider-thumb, .modal-content #slider11::-webkit-slider-thumb, .modal-content #slider12::-webkit-slider-thumb,
-.modal-content #slider13::-webkit-slider-thumb, .modal-content #slider14::-webkit-slider-thumb, .modal-content #slider15::-webkit-slider-thumb, 
-.modal-content #slider16::-webkit-slider-thumb, .modal-content #slider17::-webkit-slider-thumb, .modal-content #slider18::-webkit-slider-thumb,
-.modal-content #slider19::-webkit-slider-thumb, .modal-content #slider20::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 100vh;
-  width: 0.2em;
-  background: var(--text-color-light);
-  /* border: 0.3rem solid var(--white-color);
-  border-radius: 50%;
-  background-size: contain; */
-  cursor: pointer;
-}
-
-dialog .title {
-  color: var(--white-color);
-  margin-top: 0.3rem;
-}
-
-dialog .texto-modal {
-  color: var(--text-color-light);
-  max-width: 80%;
-  margin: 0 auto;
-}
-
-dialog .toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 3.2rem;
-}
-
 /*====  works ============================ */
 #works {
   background: var(--body-color);
@@ -1201,7 +1080,20 @@ footer .social a .whats:hover {
     height: 5.0rem;
   }
 
+  .logo {
+    margin: 0;
+  }
+
+  #header #theme {
+    right: 0;
+  }
+
   /* navigation */
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
   nav .menu {
     opacity: 1;
     visibility: visible;
@@ -1286,22 +1178,6 @@ footer .social a .whats:hover {
     padding-left: 4.8rem;
     padding-right: 4.8rem;
   }
-
-  .card #fotos-btn:hover, .card #fotos-btn2:hover, .card #fotos-btn3:hover,
-  .card #fotos-btn4:hover, .card #fotos-btn5:hover {
-    text-align: center;
-    background-color: var(--base-color);
-    color: var(--white-color);
-    border: none;
-    outline: none;
-  }
-
-  /* Modal Imagens */
-
-  .modal-content {
-    height: 100.5vmin;
-    width: 130vmin;
-  }
   
   /* works */
   #works .container {
@@ -1325,10 +1201,29 @@ footer .social a .whats:hover {
     cursor: pointer;
     position: relative;
   }
+
+  /* #works .work blockquote cite .before {
+    position: relative;
+    bottom: 18.0rem;
+    right: 38.0rem;
+    font-weight: bold;
+    font-size: 2.3rem;
+  }
+
+  #works .work blockquote cite .after {
+    position: relative;
+    top: 18.0rem;
+    right: 16.0rem;
+    color: var(--white-color);
+    font-weight: bold;
+    font-size: 2.3rem;
+  } */
+
   #works .work blockquote .title {
     left: 10.0rem;
     top: 5.0rem;
   }
+
   #works blockquote p span {
     top: -0.2rem;
     left: -3.0rem;
@@ -1396,21 +1291,10 @@ footer .social a .whats:hover {
     width: 90%;
     height: 40.0rem;
   }
-  .modal-content {
-    height: 50.5vmin;
-    width: 100%;
-  }
 }
 
 @media (min-width: 375px) {
-  .logo {
-    margin: 0;
-  }
   #header #theme {
-    right: 0;
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
+    right: 2.8rem;
   }
 }
