@@ -37,9 +37,8 @@ var swiper = new Swiper('.swiper-container', {
   cssMode: true,
   focusableElements: true,
   centeredSlides: true,
-  followFinger: true,
   autoplay: {
-    delay: 9800,
+    delay: 19500,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
