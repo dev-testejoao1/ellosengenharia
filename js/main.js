@@ -33,48 +33,68 @@ function changeHeaderWhenScroll() {
 
 /* works carousel slider swiper */
 var swiper = new Swiper('.swiper-container', {
-  effect: "cube",
-  spaceBetween: 30,
-  centeredSlides: true,
-  focusableElements: true,
-  autoplay: {
-    delay: 5500,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
-  cubeEffect: {
-    shadow: true,
-    slideShadows: true,
-    shadowOffset: 0,
-    shadowScale: 0,
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    dynamicBullets: true,
-    clickable: true,
-  },
-  grabCursor: true,
-  keyboard: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-
-// Slide Popup
-
-var swiper2 = new Swiper(".mySwiper", {
+  // effect: "cube",
+  // spaceBetween: 30,
+  // centeredSlides: true,
+  // focusableElements: true,
+  // autoplay: {
+  //   delay: 5500,
+  //   disableOnInteraction: false,
+  //   pauseOnMouseEnter: true,
+  // },
+  // cubeEffect: {
+  //   shadow: true,
+  //   slideShadows: true,
+  //   shadowOffset: 0,
+  //   shadowScale: 0,
+  // },
+  // pagination: {
+  //   el: '.swiper-pagination',
+  //   dynamicBullets: true,
+  //   clickable: false,
+  // },
+  // grabCursor: false,
+  // keyboard: false,
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
   cssMode: true,
+  focusableElements: true,
+  centeredSlides: true,
+  autoplay: {
+      delay: 5500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
   pagination: {
     el: ".swiper-pagination",
+    dynamicBullets: true,
+    clickable: true,
   },
   mousewheel: true,
   keyboard: true,
+  grabCursor: true,
 });
+
+function slide() {
+  let slideValue = document.getElementById('slider-img').value;
+  document.getElementById('my-img').style.clipPath = 'polygon(0 0,' + slideValue + '% 0,' + slideValue + '% 100%, 0 100%)';
+}
+
+function slide2() {
+  let slideValue = document.getElementById('slider-img2').value;
+  document.getElementById('my-img2').style.clipPath = 'polygon(0 0,' + slideValue + '% 0,' + slideValue + '% 100%, 0 100%)';
+}
+
+function slide3() {
+  let slideValue = document.getElementById('slider-img3').value;
+  document.getElementById('my-img3').style.clipPath = 'polygon(0 0,' + slideValue + '% 0,' + slideValue + '% 100%, 0 100%)';
+}
 
 /* ScrollReveal: Mostrar elementos quando der scroll na página */
 const scrollReveal = ScrollReveal({
