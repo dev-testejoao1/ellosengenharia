@@ -33,6 +33,31 @@ function changeHeaderWhenScroll() {
 
 /* works carousel slider swiper */
 var swiper = new Swiper('.swiper-container', {
+
+  cssMode: true,
+  focusableElements: true,
+  centeredSlides: true,
+  followFinger: true,
+  autoplay: {
+    delay: 9800,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+    clickable: true,
+  },
+  mousewheel: true,
+  keyboard: true,
+  grabCursor: true,
+});
+
+
   // effect: "cube",
   // spaceBetween: 30,
   // centeredSlides: true,
@@ -59,27 +84,6 @@ var swiper = new Swiper('.swiper-container', {
   //   nextEl: '.swiper-button-next',
   //   prevEl: '.swiper-button-prev',
   // },
-  cssMode: true,
-  focusableElements: true,
-  centeredSlides: true,
-  autoplay: {
-      delay: 5500,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    dynamicBullets: true,
-    clickable: true,
-  },
-  mousewheel: true,
-  keyboard: true,
-  grabCursor: true,
-});
 
 function slide() {
   let slideValue = document.getElementById('slider-img').value;
